@@ -1,0 +1,10 @@
+{
+  "id": "LOCAL-1",
+  "title": "Add cache invalidation to deployment flow",
+  "description": "The deploy job should clear the shared application cache after schema changes. Current incidents show stale reads after rollout when old cache entries survive the migration window.",
+  "comments": [
+    "Ops confirmed stale data lasted for 10 minutes after the last migration.",
+    "We need a rollback-safe approach and should avoid coupling deploy and runtime APIs too tightly."
+  ],
+  "source": "json"
+}
