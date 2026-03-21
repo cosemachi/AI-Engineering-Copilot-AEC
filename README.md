@@ -292,6 +292,27 @@ examples
 - `./gradlew quarkusDev -Dquarkus.http.port=8081` was validated with a live `/ticket/analyze` request.
 - queued knowledge ingest, job status, document status, and query were validated live on port `8081`.
 
+## CI
+
+GitHub Actions CI is defined in [ci.yml](.github/workflows/ci.yml).
+
+Current CI behavior:
+
+- validates the Gradle wrapper
+- runs on `push`, `pull_request`, and manual dispatch
+- uses GitHub-hosted `ubuntu-latest` runners
+- sets up Java 21
+- runs `./gradlew test`
+- runs `./gradlew quarkusBuild`
+- uploads test reports and Quarkus build artifacts
+
+Additional GitHub automation:
+
+- Dependabot config in [.github/dependabot.yml](.github/dependabot.yml)
+- CodeQL workflow in [.github/workflows/codeql.yml](.github/workflows/codeql.yml)
+- CODEOWNERS in [.github/CODEOWNERS](.github/CODEOWNERS)
+- PR template in [.github/pull_request_template.md](.github/pull_request_template.md)
+
 ## Brain Update Candidate
 
 - Session summary: scaffolded a modular Quarkus MVP for PR review, ticket analysis, and RAG with explicit provider and source boundaries.
