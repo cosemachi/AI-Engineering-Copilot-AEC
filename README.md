@@ -310,6 +310,8 @@ Additional GitHub automation:
 
 - Dependabot config in [.github/dependabot.yml](.github/dependabot.yml)
 - CodeQL workflow in [.github/workflows/codeql.yml](.github/workflows/codeql.yml)
+- CODEOWNERS in [.github/CODEOWNERS](.github/CODEOWNERS)
+- PR template in [.github/pull_request_template.md](.github/pull_request_template.md)
 
 ## Brain Update Candidate
 
